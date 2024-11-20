@@ -1,3 +1,33 @@
 body {
     font-family: "Roboto Mono", monospace;
 }
+
+h1,
+#div-frase,
+.titulo-card {
+    font-family: "Fraunces", serif;
+}
+
+#div-frase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a202c;
+    color: #f9fafb;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-img {
+    width: 100%;
+    /* Se ajusta al ancho del contenedor */
+    height: 200px;
+    /* Altura fija para todas las imágenes */
+    object-fit: cover;
+    /* Asegura que la imagen se recorte sin distorsión */
+}
+
+.instagram {
+    width: 1.5em;
+}
