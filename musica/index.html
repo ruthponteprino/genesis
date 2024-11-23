@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>musica</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/estilo.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="relative w-full h-[60vh] md:h-[60vh] lg:h-[50vh]">
+            <div class="background-video absolute inset-0 w-full h-full">
+                <video class="object-cover w-full h-full lg:h-[50vh]" autoplay loop muted>
+                    <source src="../img/clip.mp4" type="video/mp4">
+                </video>
+            </div>
+            <nav class="relative z-10">
+                <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+                    <div class="relative flex h-16 items-center justify-between">
+                        <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                            <!-- BOTON MENU MOVIL -->
+                            <button type="button" id="mobile-menu"
+                                class="relative inline-flex items-center justify-center rounded-md p-2 text-white  hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                aria-controls="mobile-menu" aria-expanded="false">
+                                <span class="absolute -inset-0.5"></span>
+                                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                </svg>
+                                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                    stroke="currentColor" aria-hidden="true" data-slot="icon">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                            <div class="flex shrink-0 items-center">
+                                <a href="../index.html"><img class="h-8 w-auto" src="../img/logo.png"
+                                        alt="psychic tv logo"></a>
+                            </div>
+                            <div class="hidden sm:ml-6 sm:block">
+                                <div class="flex space-x-4 items-center justify-center">
+                                    <a href="../bio.html"
+                                        class="px-3 py-2 text-sm font-medium text-white hover:bg-black">bio</a>
+                                    <!-- Sección con submenú para "música" -->
+                                    <div class="relative group">
+                                        <a href="index.html"
+                                            class="px-3 py-2 text-sm font-medium text-white hover:bg-black">música</a>
+                                        <!-- Submenú desplegable -->
+                                        <div class="absolute hidden bg-black text-white group-hover:block mt-2 w-40">
+                                            <a href="tg.html" class="block px-4 py-2 text-sm hover:bg-red-600">throbbing
+                                                gristle</a>
+                                            <a href="ptv.html" class="block px-4 py-2 text-sm hover:bg-red-600">psychic
+                                                tv</a>
+                                            <a href="tm.html" class="block px-4 py-2 text-sm hover:bg-red-600">thee
+                                                majesty</a>
+                                        </div>
+                                    </div>
+                                    <a href="../arte.html"
+                                        class="block px-3 py-2 text-base font-medium text-white hover:bg-black hover:text-white">arte</a>
+                                    <a href="../galeria.html"
+                                        class="px-3 py-2 text-sm font-medium text-white hover:bg-black">galeria</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MENU MOVIL -->
+                <div class="hidden" id="menu">
+                    <div class="space-y-1 px-2 pb-3 pt-2 sm:hidden">
+                        <a href="../bio.html"
+                            class="block px-3 py-2 text-base font-medium text-white hover:bg-black hover:text-white">bio</a>
+                        <!-- Botón y subsecciones para "música" -->
+                        <div>
+                            <a href="index.html"
+                                class="btn-movil w-full text-left block px-3 py-2 text-base font-medium text-white hover:bg-black">música</a>
+                            <div id="music-submenu" class="hidden pl-6">
+                                <a href="tg.html"
+                                    class="block px-3 py-2 text-sm font-medium text-white hover:bg-red-700">throbbing
+                                    gristle</a>
+                                <a href="ptv.html"
+                                    class="block px-3 py-2 text-sm font-medium text-white hover:bg-red-700">psychic
+                                    tv</a>
+                                <a href="tm.html"
+                                    class="block px-3 py-2 text-sm font-medium text-white hover:bg-red-700">thee
+                                    majesty</a>
+                            </div>
+                        </div>
+                        <a href="../arte.html"
+                            class="block px-3 py-2 text-base font-medium text-white hover:bg-black hover:text-white">arte</a>
+                        <a href="../galeria.html"
+                            class="block px-3 py-2 text-base font-medium text-white hover:bg-black hover:text-white">galeria</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+        <section class="m-3 max-w-4xl lg:mx-auto">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white-500 text-center mb-6">
+                música
+            </h1>
+
+            <div class="md:hidden">
+                <ul>
+                    <li><a href="tg.html">Throbbing Gristle</a></li>
+                    <li><a href="ptv.html">Psychic TV</a></li>
+                    <li><a href="tm.html">Thee majesty</a></li>
+                </ul>
+            </div>
+
+            <div class="md:flex">
+                <p class="text-justify p-3">
+
+                </p>
+                <img class="md:h-80 md:pt-4" src="#" alt="">
+            </div>
+        </section>
+
+
+
+        <footer class="bg-gray-900 text-gray-400 py-6">
+            <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4">
+                <!-- Enlaces -->
+                <div class="flex space-x-6">
+                    <a href="https://www.instagram.com/pandrogyne" class="hover:text-red-600 transition">
+                        <img src="../img/instagram.svg" alt="instagram logo" class="instagram">
+                    </a>
+                    <a href="../contacto.html" class="hover:text-red-600 transition">
+                        Contacto
+                    </a>
+                    <a href="../sobremi.html" class="hover:text-red-600 transition">
+                        Sobre mí
+                    </a>
+                </div>
+                <!-- Derechos -->
+                <p class="mt-4 md:mt-0 text-sm">&copy; 2024 Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
