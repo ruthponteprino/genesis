@@ -4,7 +4,9 @@ body {
 
 h1,
 #div-frase,
-.titulo-card {
+.titulo-card,
+h2,
+.li-fuente {
     font-family: "Fraunces", serif;
 }
 
