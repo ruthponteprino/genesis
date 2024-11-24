@@ -12,13 +12,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-
     <link rel="stylesheet" href="./css/estilo.css">
-    <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
-    <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/default-skin/default-skin.css">
-    <script src="https://unpkg.com/photoswipe/dist/photoswipe.min.js"></script>
-    <script src="https://unpkg.com/photoswipe/dist/photoswipe-ui-default.min.js"></script>
-
+    <link rel="stylesheet" href="./css/venobox.min.css">
 </head>
 
 <body>
@@ -119,34 +114,71 @@
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-white-500 text-center mb-6">
                 galeria
             </h1>
-            <!-- Galería -->
-            <div class="columns-1 md:columns-2 xl:columns-3 gap-7" id="gallery">
+            <div>
+                <ul class="flex flex-wrap space-x-4 justify-center">
+                    <li><a href="#genesis" class="hover:bg-black text-red-600 px-2">Genesis</a></li>
+                    <li><a href="#bandas" class="hover:bg-black text-red-600 px-2">bandas</a></li>
+                </ul>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-600 mb-4" id="genesis">genesis</h2>
+            <hr class="m-3">
+            <!-- Galería 1 -->
+            <div class="columns-1 md:columns-2 xl:columns-3 gap-7 ">
                 <div class=" break-inside-avoid mb-8">
-                    <a href="https://pagedone.io/asset/uploads/1688031162.jpg"><img class="h-auto max-w-full"
-                            src="https://pagedone.io/asset/uploads/1688031162.jpg" alt="Gallery image" /> </a>
+                    <a class="my-image-links" data-gall="gallery01" href="./img/g1.jpeg"><img class="h-auto max-w-full"
+                            src="./img/g1.jpeg" alt="Genesis" /></a>
                 </div>
                 <div class=" break-inside-avoid  mb-8">
-                    <img class="h-auto max-w-full" src="https://pagedone.io/asset/uploads/1688031232.jpg"
-                        alt="Gallery image" />
+                    <a class="my-image-links" data-gall="gallery01" href="./img/g2.jpg"><img class="h-auto max-w-full"
+                            src="./img/g2.jpg" alt="Genesis" /></a>
                 </div>
                 <div class=" break-inside-avoid  mb-8">
-                    <img class="h-auto max-w-full" src="https://pagedone.io/asset/uploads/1688031357.jpg"
-                        alt="Gallery image" />
+                    <a class="my-image-links" data-gall="gallery01" href="./img/g3.jpg"><img class="h-auto max-w-full"
+                            src="./img/g3.jpg" alt="Genesis" /></a>
                 </div>
                 <div class=" break-inside-avoid  mb-8">
-                    <img class="h-auto max-w-full" src="https://pagedone.io/asset/uploads/1688031375.jpg"
-                        alt="Gallery image" />
+                    <a class="my-image-links" data-gall="gallery01" href="./img/g4.jpeg"><img class="h-auto max-w-full"
+                            src="./img/g4.jpeg" alt="Genesis" /></a>
                 </div>
                 <div class=" break-inside-avoid  mb-8">
-                    <img class="h-auto max-w-full" src="https://pagedone.io/asset/uploads/1688031396.jpg"
-                        alt="Gallery image" />
+                    <a class="my-image-links" data-gall="gallery01" href="./img/g5.jpg"><img class="h-auto max-w-full"
+                            src="./img/g5.jpg" alt="Genesis" /></a>
                 </div>
                 <div class=" break-inside-avoid  mb-8">
-                    <img class="h-auto max-w-full" src="https://pagedone.io/asset/uploads/1688031414.png"
-                        alt="Gallery image" />
+                    <a class="my-image-links" data-gall="gallery01" href="./img/g6.jpg"><img class="h-auto max-w-full"
+                            src="./img/g6.jpg" alt="Genesis" /></a>
                 </div>
             </div>
 
+            <h2 class="text-2xl font-bold text-gray-600 mb-4" id="bandas">bandas</h2>
+            <hr class="m-3">
+            <!-- Galería 2 -->
+            <div class="columns-1 md:columns-2 xl:columns-3 gap-7 ">
+                <div class=" break-inside-avoid mb-8">
+                    <a class="my-image-links" data-gall="gallery01" href="./img/banda1.jpg"><img
+                            class="h-auto max-w-full" src="./img/banda1.jpg" alt="Psychic TV" /></a>
+                </div>
+                <div class=" break-inside-avoid  mb-8">
+                    <a class="my-image-links" data-gall="gallery01" href="./img/banda2.jpg"><img
+                            class="h-auto max-w-full" src="./img/banda2.jpg" alt="psychic tv" /></a>
+                </div>
+                <div class=" break-inside-avoid  mb-8">
+                    <a class="my-image-links" data-gall="gallery01" href="./img/banda3.jpg"><img
+                            class="h-auto max-w-full" src="./img/banda3.jpg" alt="throbbing gristle" /></a>
+                </div>
+                <div class=" break-inside-avoid  mb-8">
+                    <a class="my-image-links" data-gall="gallery01" href="./img/banda4.jpg"><img
+                            class="h-auto max-w-full" src="./img/banda4.jpg" alt="Throbbing Gristle" /></a>
+                </div>
+                <div class=" break-inside-avoid  mb-8">
+                    <a class="my-image-links" data-gall="gallery01" href="./img/banda5.jpg"><img
+                            class="h-auto max-w-full" src="./img/banda5.jpg" alt="Genesis y Jaye" /></a>
+                </div>
+                <div class=" break-inside-avoid  mb-8">
+                    <a class="my-image-links" data-gall="gallery01" href="./img/banda6.jpg"><img
+                            class="h-auto max-w-full" src="./img/banda6.jpg" alt="Psychic tv" /></a>
+                </div>
+            </div>
         </section>
 
 
@@ -169,9 +201,10 @@
             </div>
         </footer>
     </div>
+    <script src="./js/venobox.min.js"></script>
     <script src="./js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
     <script src="./js/galeria.js"></script>
+
 </body>
 
 </html>
