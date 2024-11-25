@@ -17,38 +17,55 @@ btnMovil.addEventListener('mouseover', () => {
 })
 
 // VALIDACION DE FORMULARIO
+const formulario = document.querySelector('#mi-formulario');
 
+const validar = () => {
+    let esValido = true;
 
-const submitBtn = document.querySelector('#enviar-btn');
-
-const validate = (e) => {
-    e.preventDefault();
     // Capturar los campos del formulario
-    const nombre = document.getElementById('nombre').value.trim()
-    const email = document.getElementById('email').value.trim()
-    const mensaje = document.getElementById('mensaje').value.trim()
+    const nombre = document.getElementById('nombre');
+    const email = document.getElementById('email');
+    const mensaje = document.getElementById('mensaje');
+
+    // Capturar los contenedores de error
+    const errorNombre = document.getElementById('error-nombre');
+    const errorEmail = document.getElementById('error-email');
+    const errorMensaje = document.getElementById('error-mensaje');
 
     // Validar nombre
-    if (nombre === "" || nombre.length <= 2) {
-        alert("El nombre debe tener más de 2 caracteres y no estar vacío.");
-        return false;
+    if (nombre.value.trim() === "" || nombre.value.trim().length <= 2) {
+        errorNombre.innerText = "El nombre debe tener más de 2 caracteres y no estar vacío.";
+        esValido = false;
+    } else {
+        errorNombre.innerText = "";
     }
 
     // Validar email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Por favor, ingresa un email válido con '@' y un dominio válido.")
-        return false
+    if (!emailRegex.test(email.value.trim())) {
+        errorEmail.innerText = "Por favor, ingresa un email válido."
+        esValido = false;
+    } else {
+        errorEmail.innerText = ""
     }
 
-    // Validar textarea
-    if (mensaje === "") {
-        alert("El campo de mensaje no puede estar vacío.")
-        return false;
+    // Validar mensaje
+    if (mensaje.value.trim() === "") {
+        errorMensaje.innerText = "El campo de mensaje no puede estar vacío."
+        esValido = false;
+    } else {
+        errorMensaje.innerText = "";
     }
 
-    // Si todo está correcto, permitir el envío
-    return true;
+    return esValido;
 }
 
-submitBtn.addEventListener('click', validate);
+formulario.addEventListener('submit', function (e) {
+    if (!validar()) {
+        // Si hay errores, detener el envío
+        e.preventDefault();
+    } else {
+        alert('El formulario ha sido enviado exitosamente!')
+    }
+});
+
